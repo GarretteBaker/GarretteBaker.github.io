@@ -781,17 +781,17 @@ mjx-c.mjx-c1D706.TEX-I::before {
 <li>Is <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-texatom texclass="ORD"><mjx-mover><mjx-over style="padding-bottom: 0.105em; padding-left: 0.291em; margin-bottom: -0.531em;"><mjx-mo class="mjx-n" style="width: 0px; margin-left: -0.25em;"><mjx-c class="mjx-c5E"></mjx-c></mjx-mo></mjx-over><mjx-base><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D706 TEX-I"></mjx-c></mjx-mi></mjx-base></mjx-mover></mjx-texatom></mjx-math></mjx-container></span> predictive of the phase transitions if they exist?</li>
 </ol>
 <p>We do know, based on Langosco <em>et. al.</em>'s <a data-tooltip-position="top" aria-label="https://arxiv.org/abs/2105.14111" rel="noopener" class="external-link" href="https://arxiv.org/abs/2105.14111" target="_blank">Goal Misgeneralization in Deep Reinforcement Learning</a>, and Cobbe <em>et. al.</em>'s <a data-tooltip-position="top" aria-label="https://arxiv.org/abs/1912.01588" rel="noopener" class="external-link" href="https://arxiv.org/abs/1912.01588" target="_blank">Leveraging Procedural Generation to Benchmark Reinforcement Learning</a> that there does not seem to be any major performance-level phase transitions as the number of runs increase. Therefore I expect that if there are phase transitions they will be found by looking at mechanistic changes in how the circuits evolve. </p>
-<p><img alt="Pasted image 20240109111234.png" src="Pasted image 20240109111234.png" class="internal-embed" width="300"><br>
+<p><img alt="Pasted image 20240109111234.png" src="Pasted image 20240109111234.png" class="internal-embed" width="600"><br>
 <em>From Cobbe</em> et. al. <em>the maze environment is in the middle row, last column. Notably, here the cheese can be anywhere in the maze during training.</em></p>
 <p><img alt="Pasted image 20240109111538.png" src="Pasted image 20240109111538.png" class="internal-embed" width="300"><br>
 <em>From Langosco</em> et al. <em>it is unclear to me whether this has the cheese always in the top right corner during training.</em></p>
 <p>After the first week, I've gotten a model trained, and (almost) ready to be dev-interped on. This is its training curve:<br>
-<img alt="Pasted image 20240116091420.png" src="Pasted image 20240116091420.png" class="internal-embed" width="300"></p>
+<img alt="Pasted image 20240116091420.png" src="Pasted image 20240116091420.png" class="internal-embed" width="600"></p>
 <p>Definitely not as smooth as the learning graphs in the previous examples, either potentially much rich structure to be learned, or just a bunch of random noise. I tend to think this is interesting structure, because the ridges and valleys here lseem to last for a significant number of steps. Also note that they all seem like they have the same form: a smooth end, and a sharp end. But maybe this is a trivial artefact of the smoothing operation I'm doing.</p>
 <p>The next steps for this week are choices from the following:</p>
 <ol>
 <li>Make a video of the change in the policy over time on a variety of mazes &amp; cheese positions, and align it with the above graph</li>
-<li>Calculate lambdahat for each of the 10,000 checkpoints we have saved!</li>
+<li>Calculate lambdahat for each of the 10,000 checkpoints we have saved</li>
 </ol>
     </body>
 </html>
